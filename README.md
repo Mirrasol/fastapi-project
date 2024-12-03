@@ -1,1 +1,1 @@
-# fastapi-project
+Practice project for the online course "Head start to FastAPI", Stepik.
