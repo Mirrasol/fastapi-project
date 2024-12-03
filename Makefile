@@ -1,14 +1,11 @@
 install:
 	poetry install
 
-study:
-	poetry run uvicorn app.main:app
-
 dev:
-	poetry run fastapi dev app/main.py
+	poetry run uvicorn main:app
 
-test-unit:
-	poetry run pytest -v app/test/unit
+test:
+	poetry run pytest -v app/test/
 
 lint:
 	poetry run flake8 app
