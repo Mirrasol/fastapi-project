@@ -1,5 +1,5 @@
 import datetime
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class ToDoCreate(BaseModel):
@@ -8,5 +8,7 @@ class ToDoCreate(BaseModel):
 
 
 class ToDoFromDB(ToDoCreate):
+    model_config = ConfigDict(from_attributes=True)
+
     id: int
     created_at: datetime.datetime
